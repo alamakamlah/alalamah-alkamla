@@ -1,0 +1,57 @@
+.profile-page-container {
+    padding: 5rem;
+    max-width: 100%;
+}
+
+.profile-page-heading h1 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.user-profile-info {
+    padding: 1rem;
+}
+
+.user-info-field {
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #FCF0F1;
+}
+
+.user-info-field h4 {
+    margin-right: 10px;
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 1.3rem;
+}
+
+.user-info-field h4:last-of-type {
+    color: black;
+    font-size: 1rem;
+}
+
+.user-info-field h5 {
+    color: gray;
+    font-family: var(--font-family-english);
+    cursor: pointer;
+    margin-left: 4rem;
+}
+
+.profile-edit-button {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--font-family-english);
+    background-color: var(--color-text);
+    width: 15%;
+    border-radius: 15px;
+    color: white;
+    justify-content: space-around;
+    cursor: pointer;
+    font-weight: 800;
+}

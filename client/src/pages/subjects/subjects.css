@@ -1,0 +1,19 @@
+.subjects-content-container {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+}
+
+.subjects-content-container h1 {
+    padding: 2rem 0;
+    font-size: 3rem;
+}
+
+.subjects-content-container .lessons-container {
+    padding: 2rem 0;
+}
+
+.complete-your-profile {
+    margin-top: 3rem;
+    color: gray;
+    font-family: var(--font-family-english);
+}

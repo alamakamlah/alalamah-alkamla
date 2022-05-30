@@ -1,0 +1,44 @@
+.requests-container {
+    padding: 5rem;
+}
+
+.requests-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 3rem;
+}
+
+.requests-container-all {
+    margin-top: 3rem;
+}
+
+.requests-container input[type="radio"] {
+    display: none;
+    padding: 1rem;
+    margin: 1px;
+}
+
+.requests-container input[type="radio"]:checked + label {
+    border-bottom: solid 2px #FCF0F1;
+}
+
+.requests-multiple-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    font-family: var(--font-family-english);
+}
+
+.requests-multiple-input-container a {
+    border-bottom: solid 2px #FCF0F1;
+    padding: 10px;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .requests-multiple-input-container {
+        flex-direction: column !important;
+    }
+}

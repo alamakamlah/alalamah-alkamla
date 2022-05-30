@@ -1,0 +1,130 @@
+.request-details-container {
+    padding: 5rem;
+}
+
+.request-details-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 3rem;
+}
+
+.request-details {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.request-details h4 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.request-user-details,
+.request-meta-details {
+    width: 50%;
+}
+
+.request-meta-details .image-container {
+    width: 100%;
+}
+
+
+.request-meta-details .image-container img {
+    width: 100%;
+}
+
+.request-approve {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.request-approve label {
+    font-family: var(--font-family-english);
+    color: gray;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.request-approve input {
+    background-color: #FCF0F1;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+.request-approve button,
+.request-reject button {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+}
+
+.request-reject button {
+    width: 40%;
+}
+
+.request-body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-body-container .request-actions {
+    width: 100%;
+}
+
+.request-meta-details,
+.request-meta-details h2, 
+.request-meta-details h3, 
+.request-meta-details h4, 
+.request-meta-details div, 
+.request-meta-details a,
+.request-meta-details p
+ {
+    width: 100%;
+}
+
+.request-body-container .request-actions div,
+.request-body-container .request-actions label,
+.request-body-container .request-actions input,
+.request-body-container .request-actions button {
+    width: 100%;
+}
+
+.request-meta-details {
+    font-family: var(--font-family-english);
+}
+
+.request-meta-details h3 {
+    color: var(--color-text);
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+.request-meta-details h2, 
+.request-meta-details a {
+    font-weight: bold;
+    color: gray;
+    font-size: 1rem;
+}
+
+.request-course-lessons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+    .request-details {
+        flex-direction: column !important;
+    }
+    .request-user-details,
+    .request-meta-details,
+    .request-body-container {
+        width: 100%;
+    }
+}

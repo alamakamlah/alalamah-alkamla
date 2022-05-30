@@ -1,0 +1,97 @@
+.store-container {
+    padding: 5rem;
+    width: 100%;
+}
+
+.store-heading {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.store-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 4rem;
+}
+
+.store-search {
+    margin: 1rem;
+    width: 30%;
+}
+
+.store-search form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.store-search form input {
+    padding: 0.5rem;
+    background-color: #FCF0F1;
+    border: none;
+    border-radius: 10px;
+    margin: 1px 0;
+    font-family: var(--font-family-english);
+    width: 100%;
+}
+
+.store-search form input:focus,
+.store-create-post form input:focus,
+.store-create-post form textarea:focus,
+.store-create-post form select:focus {
+    outline: none;
+}
+
+.store-search form button,
+.store-create-post form button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+.store-link {
+    color: gray;
+    padding: 1rem;
+    font-family: var(--font-family-english);
+    cursor: pointer;
+    width: 15%;
+}
+
+.products-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+@media screen and (max-width: 1024px) {
+    .form-create-post h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .store-container {
+        padding: 5rem 1.5rem;
+    }
+
+    .store-heading {
+        flex-direction: column !important;
+    }
+
+    .lesson-search {
+        width: 100%;
+    }
+
+    .products-container {
+        display: flex;
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .store-link {
+        width: 100%;
+    }
+}

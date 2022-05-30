@@ -1,0 +1,149 @@
+.product-details-container {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.course-details-container {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.product-download-button {
+    width: 100%;
+    font-family: var(--font-family-english);
+    display: flex;
+    justify-content: center;
+}
+
+.product-download-button a {
+    padding: 10px 20px;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+}
+
+.product-ratings {
+    font-family: var(--font-family-english);
+    color: gray;
+}
+
+.product-comment-section {
+    margin-top: 1rem;
+}
+
+.product-comment-section h4 {
+    padding: 0.4rem;
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 2rem;
+}
+
+.product-rating-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-rating-input select {
+    background-color: #FCF0F1;
+    margin: 2px 0;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.product-details-video-link {
+    display: flex;
+    justify-content: center;
+}
+
+.product-details-video-link iframe {
+    width: 70%;
+    height: 400px;
+}
+
+.product-rating-input button {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.product-rating-input h4 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+}
+
+@media screen and (max-width: 1024px) {
+    .post-details-container {
+        margin: 5rem auto;
+    }
+
+    .post-details-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .post-details-heading h2 {
+        font-size: 1rem;
+    }
+
+    .post-details-creator h3 {
+        font-size: 0.7rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 700px) {
+    .post-details-container {
+        margin: 5rem auto;
+    }
+
+    .course-details-grade {
+        padding: 0;
+    }
+
+    .post-details-content p {
+        font-size: 0.9rem;
+    }
+    .course-useful-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .product-comment-section div h6, 
+    .product-comment-section div p {
+        font-size: 0.9rem;
+    }
+
+    .product-details-reader-actions {
+        display: flex;
+        flex-direction: column !important;
+        /* padding: 0; */
+    }
+
+    .post-details-comment-input {
+        width: 80%;
+    }
+
+    .product-details-video-link iframe {
+        height: 200px;
+    }
+
+    .post-details-comment-input {
+        display: flex;
+        flex-direction: column !important;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .post-details-comment-input button {
+        width: 100%;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+    }
+
+    .post-details-comment-input input {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+        height: 100px;
+    }
+    
+}

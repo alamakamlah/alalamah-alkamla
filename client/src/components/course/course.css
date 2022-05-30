@@ -1,0 +1,5 @@
+.course-container:hover, 
+.course-container:active {
+    animation: pop-up 0.5s both;
+    cursor: pointer;
+}

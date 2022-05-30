@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d0a32d2f.css",
+    "main.js": "/static/js/main.22f909b4.js",
+    "static/media/header.png": "/static/media/header.6de04e7f399f454f25a9.png",
+    "static/media/forumWhite.png": "/static/media/forumWhite.9aea9c1e22a666ac1a45.png",
+    "static/media/logo.png": "/static/media/logo.bf8b5f3fceebac9790da.png",
+    "static/media/logoWhite.png": "/static/media/logoWhite.3b70703f35f4f9289153.png",
+    "static/media/libraryPurple.png": "/static/media/libraryPurple.15b6b69186a00b97a0a4.png",
+    "static/media/libraryWhite.png": "/static/media/libraryWhite.d76202aac331d2ae43dc.png",
+    "static/media/classPurple.png": "/static/media/classPurple.9265eb27502928c9015c.png",
+    "static/media/logotitle.png": "/static/media/logotitle.c68c5d83ace0b016d685.png",
+    "static/media/classroomWhite.png": "/static/media/classroomWhite.592d622e272302f047b7.png",
+    "static/media/pointsPurple.png": "/static/media/pointsPurple.bce1c67b8f823499e87e.png",
+    "static/media/pointsWhite.png": "/static/media/pointsWhite.0013a8dc9ae36cdbda25.png",
+    "static/media/cartWhite.png": "/static/media/cartWhite.e2c67a92d1f12d9b0f29.png",
+    "static/media/favPurple.png": "/static/media/favPurple.9e7c17eb40c90186a965.png",
+    "static/media/usericon.png": "/static/media/usericon.dda57e067e2475c29409.png",
+    "static/media/testPurple.png": "/static/media/testPurple.c04f84d282f27724b281.png",
+    "static/media/testWhite.png": "/static/media/testWhite.715a77880c58a763e32f.png",
+    "index.html": "/index.html",
+    "main.d0a32d2f.css.map": "/static/css/main.d0a32d2f.css.map",
+    "main.22f909b4.js.map": "/static/js/main.22f909b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0a32d2f.css",
+    "static/js/main.22f909b4.js"
+  ]
+}

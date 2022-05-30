@@ -1,0 +1,26 @@
+.user-container {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-weight: 800;
+    border-bottom: 1px solid #FCF0F1;
+}
+
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 700px) {
+    .user-container {
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .user-container p {
+        margin-bottom: 10px;
+    }
+}

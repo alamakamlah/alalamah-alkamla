@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+.app-container {
+  max-width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+.divider {
+  width: 40%;
+  height: 2px;
+  background-color: #FCF0F1;
+}
+
+.page__padding {
+	padding: 1rem 4rem;
+  margin: 0;
+}
+
+.button-primary {
+  border: none;
+  color: white;
+  background-color: var(--color-text);
+  font-family: var(--font-family-english);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button-primary {
+  border: none;
+  color: white;
+  background-color: var(--color-text);
+  font-family: var(--font-family-english);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button-secondary {
+  border: none;
+  color: var(--color-text);
+  background-color: #FCF0F1;
+  font-family: var(--font-family-english);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button-primary:hover,
+.button-primary:active {
+  animation: button-primary-hover 0.5s both 
+}
+
+.button-secondary:hover,
+.button-secondary:active {
+  animation: button-secondary-hover 0.5s both 
+}
+
+.section__margin {
+	margin: 4rem 6rem;
+}
+
+@keyframes button-primary-hover {
+  0% {
+
+  }
+
+  100% {
+    color: var(--color-text);
+    background-color: white;
+  }
+}
+
+@keyframes input-hover {
+  0% {
+
+  }
+
+  100% {
+    color: var(--color-text);
+    box-shadow: 5px 10px 18px lightgrey;
+  }
+}
+
+@keyframes button-secondary-hover {
+  0% {
+    border: none;
+  }
+
+
+  100% {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 700px) {
+	.section__padding {
+		padding: 4rem;
+	}
+	.section__margin {
+		margin: 4rem;
+	}
+  .divider {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+	.section__padding {
+		padding: 4rem 2rem;
+	}
+	.section__margin {
+		margin: 4rem 2rem;
+	}
+}

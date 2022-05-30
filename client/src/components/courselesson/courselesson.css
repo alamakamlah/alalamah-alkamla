@@ -1,0 +1,42 @@
+.course-lesson-container {
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.course-lesson-container h2 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 2.5rem;
+}
+
+.course-lesson-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.course-lesson-info a {
+    color: gray;
+    font-family: var(--font-family-english);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    .course-lesson-container {
+        padding: 0;
+    }
+    
+    .course-lesson-info {
+        flex-direction: column;
+    }
+
+    .course-lesson-info .product-video-link {
+        width: 100%;
+    }
+
+    .course-lesson-info .product-video-link iframe {
+        width: 100%;
+    }
+}

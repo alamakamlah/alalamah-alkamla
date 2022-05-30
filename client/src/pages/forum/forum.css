@@ -1,0 +1,114 @@
+.forum-container {
+    padding: 4rem;
+    max-width: 100%;
+}
+
+.forum-heading {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forum-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 4rem;
+}
+
+.forum-search {
+    margin: 1rem;
+    width: 30%;
+}
+
+.forum-search form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.forum-search form input {
+    padding: 0.5rem;
+    background-color: #FCF0F1;
+    border: none;
+    border-radius: 10px;
+    margin: 1px 0;
+    font-family: var(--font-family-english);
+    width: 100%;
+}
+
+.forum-search form input:focus,
+.form-create-post form input:focus,
+.form-create-post form textarea:focus,
+.form-create-post form select:focus {
+    outline: none;
+}
+
+.forum-search form button,
+.form-create-post form button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+.forum-posts-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.form-create-post {
+    padding: 1rem;
+    width: 30%;
+}
+
+.form-create-post h2 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.form-create-post form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-create-post form input,
+.form-create-post form select,
+.form-create-post form textarea {
+    padding: 0.7rem;
+    margin: 1px;
+    border: none;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+}
+
+.form-create-post form textarea {
+    height: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+    .form-create-post h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .forum-heading {
+        flex-direction: column !important;
+    }
+
+    .forum-search,
+    .form-create-post {
+        width: 100%;
+    }
+
+    .forum-posts-container {
+        flex-direction: column;
+    }
+}

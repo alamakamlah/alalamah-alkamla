@@ -1,0 +1,44 @@
+.edit-post-container {
+    padding: 5rem;
+}
+
+.edit-post-heading h1 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 3rem;
+}
+
+.edit-post-heading {
+    margin-bottom: 2rem;
+}
+
+.edit-post-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.edit-post-form form input,
+.edit-post-form form select,
+.edit-post-form form textarea {
+    padding: 0.7rem;
+    margin: 1px;
+    border: none;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.edit-post-form form textarea {
+    height: 150px;
+}
+
+.edit-post-form form button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 2px;
+    width: 30%;
+}

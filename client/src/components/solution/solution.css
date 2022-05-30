@@ -1,0 +1,30 @@
+
+.solution-container {
+    padding: 2rem 0;
+}
+
+.solution-answer-container {
+    padding: 10px 0;
+}
+
+.solution-answer-container h5 {
+    color: gray;
+}
+
+.solution-answer-container h4 {
+    margin: 5px 0;
+}
+
+
+.solution-answer-container input {
+    padding: 10px;
+    background-color: #FCF0F1;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.solution-container button {
+    padding: 10px 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,25 @@
+.admin-dashboard-container {
+    padding: 5rem;
+}
+
+.admin-dashboard-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 3rem;
+}
+
+.dashboard-items {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 700px) {
+    .dashboard-items {
+        flex-direction: column !important;
+    }
+
+    .dashboard-item {
+        margin: 1rem;
+    }
+}

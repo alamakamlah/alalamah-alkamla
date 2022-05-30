@@ -1,0 +1,120 @@
+.points-container {
+    padding: 5rem;
+    max-width: 100%;
+}
+
+.points-heading h1 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 3rem;
+}
+
+.points-heading {
+    margin-bottom: 2rem;
+}
+
+.current-credit h2 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+}
+
+.current-credit-container{
+    margin-top: 1rem;
+    border: 1px solid var(--color-text);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 30%;
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.credit-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.credit-charge, 
+.credit-withdraw {
+    width: 50%;
+}
+
+.credit-withdraw h3,
+.credit-charge h3 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 1.5rem;
+}
+
+.credit-charge form,
+.credit-withdraw form {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-family: var(--font-family-english);
+}
+
+.credit-charge form label,
+.credit-charge form p,
+.credit-withdraw form label {
+    color: gray;
+}
+
+.credit-charge form p {
+    margin: 10px 0;
+}
+
+.credit-form-input {
+    padding: 0.7rem;
+    margin: 1px;
+    border: none;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.credit-charge form button,
+.credit-withdraw form button {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.points-container h5 {
+    font-family: var(--font-family-english);
+    color: gray;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 700px) {
+  .credit-actions {
+      flex-direction: column !important;
+  }
+
+  .current-credit-container {
+      width: 100%;
+  }
+
+  .credit-charge,
+  .credit-withdraw {
+      width: 100%;
+  }
+
+  .points-container h5 {
+    font-size: 0.7rem;
+  }
+
+  .points-container {
+    padding: 5rem 2rem;
+  }
+}

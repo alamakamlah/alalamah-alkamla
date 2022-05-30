@@ -1,0 +1,109 @@
+.lesson-container {
+    padding: 1rem;
+    border: none;
+    background-color: #FEFEFE;
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    border-radius: 15px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.lesson-link {
+    padding: 1rem;
+}
+
+/* .lesson-container h1,
+.lesson-container h2,
+.lesson-container h3,
+.lesson-container h4,
+.lesson-container p {
+    border-bottom: 1px solid #FCF0F1;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+} */
+
+.lesson-headings,
+.lesson-details {
+    padding: 1rem;
+    border-bottom: 1px solid #FCF0F1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-container h4 a {
+    color: gray;
+}
+
+.lesson-container p {
+    padding: 1rem;
+    border-bottom: 1px solid #FCF0F1;
+}
+
+.lesson-title h3 {
+    color: gray;
+}
+
+.lesson-user-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 1rem;
+}
+
+.lesson-container button {
+    padding: 10px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 700px) {
+
+    .lesson-container {
+        padding: 1rem 3px;
+        margin: 1rem auto;
+    }
+
+    .lesson-user-actions button {
+        width: 100%;
+    }
+
+    .lesson-user-actions {
+        width: 100%;
+        text-align: center;
+    }
+    .lesson-headings h2 {
+        font-size: 1rem;
+    }
+
+    .lesson-details h3 {
+        font-size: 0.8rem;
+        padding: 3px;
+        margin: 3px;
+        width: 100%;
+        border-bottom: 1px solid #FEFEFE;
+    }
+
+    .lesson-user-actions,    
+    .lesson-headings,
+    .lesson-details {
+        display: flex;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+}

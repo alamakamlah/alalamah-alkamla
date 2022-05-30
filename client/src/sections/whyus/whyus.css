@@ -1,0 +1,64 @@
+.whyus-heading {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.whyus-heading h1 {
+    font-family: var(--font-family-english);
+    font-size: 4rem;
+    position: absolute;
+    top: 180px;
+    color: white;
+}
+
+.whyus-content {
+    display: flex;
+    justify-content: center;
+}
+
+.whyus-content li {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.whyus-content li a {
+    cursor: pointer;
+    color: gray;
+}
+
+@media screen and (max-width: 1024px) {
+    .whyus-heading {
+        width: 100%;
+    }
+
+    .whyus-heading img {
+        width: 100%;
+    }
+
+    .whyus-heading h1 {
+        top: 140px;
+    }
+
+    .whyus-content li {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .whyus-heading h1 {
+        color: var(--color-text);
+        top: -15px;
+        left: 50px;
+        font-size: 2.5rem;
+    }
+
+    .whyus-content li {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+}

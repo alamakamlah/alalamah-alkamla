@@ -1,0 +1,93 @@
+.cta-heading-ar {
+    font-family: var(--font-family-arabic);
+    width: 100%;
+    color: var(--color-text);
+    font-size: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cta-container-ar form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.cta-container-ar form input,
+.cta-container-ar form select {
+    padding: 1rem;
+    margin: 0 1.5px;
+    text-align: end;
+    font-family: var(--font-family-arabic);
+    border: none;
+    background-color: #FCF0F1;
+    color: var(--color-text);
+    font-size: 1.05rem;
+}
+
+.cta-container-ar form input:first-of-type {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.cta-container-ar form button {
+    border: none;
+    color: #FCF0F1;
+    background-color: var(--color-text);
+    font-family: var(--font-family-arabic);
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    font-size: 1.1rem;
+    width: 150px;
+}
+
+.cta-container-ar form button:hover,
+.cta-container-ar form button:active {
+    animation: button-primary-hover 0.5s both;
+}
+
+.cta-container-ar form input:focus {
+    outline: none;
+}
+
+.cta-container-ar form input:hover,
+.cta-container-ar form input:active {
+    animation: input-hover 0.5s both;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .cta-container-ar form {
+        flex-direction: column;
+    }
+
+    .cta-container-ar form input,
+    .cta-container-ar form select {
+        margin: 1px 0;
+        width: 100%;
+    }
+
+    .cta-container-ar form input:first-of-type {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 0;
+    }
+
+    .cta-container-ar form button {
+        width: 100%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .cta-heading-ar {
+        font-size: 1.3rem;
+    }
+}

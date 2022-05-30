@@ -1,0 +1,9 @@
+.posts-container {
+    width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+    .posts-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,33 @@
+.test-preview-container h1{
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+}
+
+.test-preview-container h3 {
+    font-family: var(--font-family-english);
+    margin: 5px 0;
+}
+
+.test-question-input-container {
+    width: 100%;
+    font-family: var(--font-family-english);
+}
+
+.test-question-input-container input {
+    width: 100%;
+}
+
+.test-question-input-container a,
+.test-form-link {
+    color: gray;
+    font-family: var(--font-family-english);
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 30px 10px 0;
+}
+
+.test-question-input-container a:last-of-type {
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+}

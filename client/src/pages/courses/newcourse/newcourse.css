@@ -1,0 +1,35 @@
+.store-form h3 {
+    font-family: var(--font-family-english);
+}
+
+.store-form h3 a {
+    color: gray; 
+    margin: 0 1rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .form-create-post h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .store-form-container {
+        max-width: 100%;
+        padding: 5rem 1rem;
+    }
+
+    .store-form {
+        width: 100%;
+    }
+
+    .store-form input {
+        width: 100%;
+    }
+
+    .store-form h3,
+    .store-form h2 {
+        font-size: 1rem;
+    }
+}

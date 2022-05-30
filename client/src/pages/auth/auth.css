@@ -1,0 +1,153 @@
+.auth-container {
+    padding: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FCF0F1;
+    width: 60%;
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.auth-form h1 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.auth-form form input,
+.auth-submit-button,
+.auth-form form option,
+.auth-form form select {
+    padding: 1rem;
+    border: none;
+    background-color: #FCF0F1;
+    margin: 1px;
+    border-radius: 15px;
+}
+
+.auth-form form input[type="radio"] {
+    display: none;
+}
+
+.multiple-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.multiple-input-container label {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+    padding: 2px;
+    transition: all 0.4s;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.user-details-field {
+    display: flex;
+    align-items: center;
+}
+
+.auth-form form input[type="radio"]:checked + label {
+    border-bottom: solid 2px #FCF0F1;
+}
+
+.auth-submit-button,
+.auth-form form input[type="submit"] {
+    background-color: var(--color-text);
+    color: white;
+    font-family: var(--font-family-english);
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.auth-form form p {
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+}
+
+.auth-form form p a {
+    color: grey;
+    cursor: pointer;
+}
+
+.other-signin-options {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.other-signin-options button {
+    padding: 1rem;
+    width: 60%;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    font-family: var(--font-family-english);
+    font-size: 1rem;
+}
+
+.fabebook-login {
+    color: white;
+    background-color: #3B5998;
+}
+
+.auth-form form input:focus,
+.auth-form form select:focus {
+    outline: none;
+}
+
+.auth-option {
+    padding: 3px;
+    border-bottom: 1px solid #FCF0F1;
+    cursor: pointer;
+}
+
+.auth-form form input[type="submit"]:hover,
+.auth-submit-button:hover,
+.auth-submit-button:active,
+.auth-form form input[type="submit"]:active {
+  animation: button-primary-hover 0.5s both 
+}
+
+@media screen and (max-width: 1024px) {
+    .auth-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .auth-container {
+        padding: 1rem;
+    }
+    .form-name-container input {
+        width: 100%;
+    }
+    .other-signin-options button {
+        width: 100%;
+    }
+}

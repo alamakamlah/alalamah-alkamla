@@ -1,0 +1,77 @@
+.store-form-container {
+    padding: 5rem;
+    max-width: 100%;
+}
+
+.store-form-heading {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.store-form-heading h1 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    font-size: 4rem;
+}
+
+.store-form {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.store-form form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.store-form form input,
+.store-form form select, 
+.store-form form option {
+    padding: 0.7rem;
+    margin: 1px;
+    border: none;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.store-form form select {
+    border-bottom-right-radius: 0 ;
+    border-top-right-radius: 0 ;
+    margin-right: 1px;
+}
+
+input[type="url"] {
+    border-bottom-left-radius: 0px ;
+    border-top-left-radius: 0px ;
+}
+
+.store-form form button {
+    padding: 0.7rem;
+    border-bottom-right-radius: 15px ;
+    border-top-right-radius: 15px ;
+}
+
+.store-form form button:last-of-type {
+    border-radius: 15px;
+}
+
+.store-form-type a {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.store-form-type a:hover 
+.store-form-type a:focus {
+    border-bottom: 1px solid #FCF0F1;
+}
+
+.store-form form input[type="submit"] {
+
+}

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Oxygen&display=swap');
+
+:root {
+	--font-family-arabic: 'Lalezar', cursive;
+	--font-family-english: 'Oxygen', sans-serif;
+
+	--gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+	--gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+
+	--color-bg: white;
+	--color-footer: #031b34;
+	--color-blog: #042c54;
+	--color-text: #33001e;
+	--color-subtext: #ff8a71;
+}

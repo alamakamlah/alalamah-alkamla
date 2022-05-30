@@ -1,0 +1,70 @@
+.whoarewe-container {
+    padding: 3rem;
+    max-width: 100%;
+}
+
+.whoarewe-container h2,
+.whoarewe-container h1 {
+    font-family: var(--font-family-english);
+    color: var(--color-text);    
+    margin-bottom: 1rem;
+}
+
+.whoarewe-container h2 {
+    font-size: 1rem;
+}
+
+.toc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: var(--font-family-english);
+}
+
+.toc h2 {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.toc a {
+    color: gray;
+    margin: 3px;
+}
+
+.tocar a, 
+.tocar h2 {
+    text-align: end;
+    font-family: var(--font-family-arabic) !important;
+}
+
+.whoarwe-ar p {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.whoarwe-ar h1,
+.whoarwe-ar h2,
+.whoarwe-ar h3 {
+    font-family: var(--font-family-arabic) !important;
+}
+
+.whoarewe-container h1 {
+    margin: 2rem 0;
+}
+
+.whoarewe-container h3 {
+    font-family: var(--font-family-english);
+    margin: 1rem;
+    color: gray;
+}
+
+.whoarewe-container p {
+    font-family: var(--font-family-english);
+    margin: 0 2rem;
+}
+
+@media screen and (max-width: 700px) {
+    .whoarewe-container {
+        padding: 3rem 1rem;
+    }
+}

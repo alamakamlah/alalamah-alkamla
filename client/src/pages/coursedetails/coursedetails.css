@@ -1,0 +1,45 @@
+.post-details-creator h3 {
+    color: var(--color-text);
+    font-family: var(--font-family-english);
+}
+
+.course-details-button {
+    padding: 1rem;
+    width: 30%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.course-user-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-useful-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #FCF0F1;
+    margin-bottom: 20px;
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+}
+
+.course-details-heading h2 {
+    font-family: var(--font-family-english);
+    color: gray;
+}
+
+.course-details-container h4 a {
+    color: gray;
+}
+
+.course-user-actions p {
+    font-family: var(--font-family-english);
+    color: var(--color-text);
+}

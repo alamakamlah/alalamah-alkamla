@@ -1,0 +1,27 @@
+.store-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-form h2 {
+    font-family: var(--font-family-english);
+    color: gray;
+    margin: 1rem 0;
+}
+
+.new-lesson-grade,
+.new-lesson-term {
+    padding: 0.7rem;
+    margin: 1px;
+    border: none;
+    background-color: #FCF0F1;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.new-lesson-option {
+    padding: 0.7rem;
+    border-bottom: 1px solid #FCF0F1;
+    cursor: pointer;
+}
