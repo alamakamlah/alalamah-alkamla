@@ -30,9 +30,9 @@ const LibraryItemDetailsAr = ({isEnglish, setIsEnglish}) => {
   const owner = users?.find(({_id}) => _id === libraryItem?.user?._id)
 
 
-  const isBought = libraryItem?.users.includes(userC?.result?._id) || userC?.result?._id === libraryItem?.user?._id || userC?.result?.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com"
+  const isBought = libraryItem?.users.includes(userC?.result?._id) || userC?.result?._id === libraryItem?.user?._id || userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com"
 
-  const isAuthorized = userC?.result?.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com"
+  const isAuthorized = userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com"
   const displayVideo = isBought && libraryItem?.type === "video"
   const displayDownload = isBought && libraryItem?.type === "file"
   const [comment, setComment] = useState('')

@@ -11,15 +11,13 @@ export const yearsEgypt = [
     {arabic: "الصف الأول الثانوي", english: "Tenth Grade"},
     {arabic: "الصف الثاني الثانوي", english: "Eleventh Grade"},
     {arabic: "الصف الثالث الثانوي", english: "Twelfth Grade"},
-    
-    {arabic: "الصف الأول (الدبلومة الأمريكية)", english: "Tenth Grade (American Diploma)"},
-    {arabic: "الصف الثاني (الدبلومة الأمريكية)", english: "Eleventh Grade (American Diploma)"},
-    {arabic: "الصف الثالث (الدبلومة الأمريكية)", english: "Twelfth Grade (American Diploma)"},
 ]
 
 export const Systems = [
     {arabic: "النظام المصري", english: "Egyptian System"},
-    {arabic: "النظام القطري", english: "Qatari System"}
+    {arabic: "النظام القطري", english: "Qatari System"},
+    {arabic: "النظام الأمريكي", english: "American System"},
+    {arabic: "النظام البريطاني", english: "British System"}
 ]
 
 export const yearsQatar = [
@@ -41,11 +39,49 @@ export const yearsQatar = [
     {arabic: "المستوى الثاني عشر العلمى", english: "Twelfth Grade Science"},
 ]
 
+export const yearsAmerican = [
+    {arabic: "الصف الأول", english: "First Grade"},
+    {arabic: "الصف الثاني", english: "Second Grade"},
+    {arabic: "الصف الثالث", english: "Third Grade"},
+    {arabic: "الصف الرابع", english: "Fourth Grade"},
+    {arabic: "الصف الخامس", english: "Fifth Grade"},
+    {arabic: "الصف السادس", english: "Sixth Grade"},
+    {arabic: "الصف السابع", english: "Seventh Grade"},
+    {arabic: "الصف الثامن", english: "Eighth Grade"},
+    {arabic: "الصف التاسع", english: "Ninth Grade"},
+    {arabic: "SAT", english: "SAT"},
+    {arabic: "ACT", english: "ACT"},
+    {arabic: "EST", english: "EST"},
+]
+
+export const yearsBritish = [
+    {arabic: "الصف الأول", english: "First Grade"},
+    {arabic: "الصف الثاني", english: "Second Grade"},
+    {arabic: "الصف الثالث", english: "Third Grade"},
+    {arabic: "الصف الرابع", english: "Fourth Grade"},
+    {arabic: "الصف الخامس", english: "Fifth Grade"},
+    {arabic: "الصف السادس", english: "Sixth Grade"},
+    {arabic: "الصف السابع", english: "Seventh Grade"},
+    {arabic: "الصف الثامن", english: "Eighth Grade"},
+    {arabic: "الصف التاسع", english: "Ninth Grade"},
+    {arabic: "IGCSE", english: "IGCSE"},
+    {arabic: "OL", english: "OL"},
+    {arabic: "AS", english: "AS"},
+]
+
 export const types = [
     {arabic: "مدرس", english: "Teacher"},
     {arabic: "طالب", english: "Student"},
     {arabic: "مؤسسة تعليمية", english: "Institution"},
     {arabic: "ولي أمر", english: "Parent"},
+]
+
+export const typesAdmin = [
+    {arabic: "مدرس", english: "Teacher"},
+    {arabic: "طالب", english: "Student"},
+    {arabic: "مؤسسة تعليمية", english: "Institution"},
+    {arabic: "ولي أمر", english: "Parent"},
+    {arabic: "أدمن", english: "Admin"},
 ]
 
 export const terms = [
@@ -97,6 +133,41 @@ export const TenthLevel = [
     {arabic: "الحوسبة وتكنولوجيا المعلومات", english: "Sciences"},
     {arabic: "الدراسات الاجتماعية", english: "Social Studies"},
     {arabic: "المهارات الحياتية", english: "Life Skills"},
+]
+
+export const OL = [
+    {arabic: "الكيمياء", english: "Chemistry"},
+    {arabic: "المحاسبة", english: "Accounting"},
+    {arabic: "علوم الحاسب", english: "Computer Science"},
+    {arabic: "اللغة الفرنسية", english: "French"},
+    {arabic: "الفيزياء", english: "Physics"},
+    {arabic: "الاقتصاد", english: "Economics"},
+    {arabic: "الجغرافيا", english: "Geography"},
+    {arabic: "الأدب الانجليزي", english: "Literature in English"},
+    {arabic: "الأحياء", english: "Biology"},
+    {arabic: "الفن والتصميم", english: "Art and Design"},
+    {arabic: "اللغة الألمانية", english: "German"},
+    {arabic: "علم الاجتماع", english: "Sociology"},
+    {arabic: "الرياضيات", english: "Maths"},
+    {arabic: "إدارة الأعمال", english: "Business"},
+    {arabic: "التاريخ", english: "History"},
+    {arabic: "السفر والسياحة", english: "Travel and Tourism"},
+    {arabic: "اللغة الانجليزية", english: "English as a Second Language (ESL)"},
+    {arabic: "تكنولوجيا المعلومات والاتصالات", english: "Information and Communication Technology (ICT)"},
+]
+
+export const AS = [
+    {arabic: "الكيمياء", english: "Chemistry"},
+    {arabic: "المحاسبة", english: "Accounting"},
+    {arabic: "اللغة الفرنسية", english: "French"},
+    {arabic: "اللغة العربية", english: "Arabic"},
+    {arabic: "الفيزياء", english: "Physics"},
+    {arabic: "الاقتصاد", english: "Economics"},
+    {arabic: "الأحياء", english: "Biology"},
+    {arabic: "الرياضيات", english: "Maths"},
+    {arabic: "Solomon Papers (Maths AS/IAL)", english: "Solomon Papers (Maths AS/IAL)"},
+    {arabic: "إدارة الأعمال", english: "Business"},
+    {arabic: "دراسات الأعمال", english: "Business Studies"},
 ]
 
 export const EleventhLevelArts = [
@@ -384,36 +455,22 @@ export const TenthGradeAD = [
     {arabic: "اللغة الفرنسية", english: "French"},
     {arabic: "اللغة الألمانية", english: "German"},
     {arabic: "الحاسب الآلي", english: "Computer"},
-]
-
-export const EleventhGradeAD = [
-    {arabic: "اللغة العربية", english: "Arabic"},
-    {arabic: "الرياضيات", english: "Maths"},
-    {arabic: "اللغة الإنجليزية", english: "English"},
-    {arabic: "التاريخ", english: "History"},
-    {arabic: "الدراسات الاجتماعية", english: "Social Studies"},
-    {arabic: "الاحياء", english: "Biology"},
     {arabic: "الكيمياء", english: "Chemistry"},
     {arabic: "علم الاجتماع", english: "Sociology"},
-    {arabic: "اللغة الفرنسية", english: "French"},
-    {arabic: "اللغة الألمانية", english: "German"},
-    {arabic: "الحاسب الآلي", english: "Computer"},
-]
-
-export const TwelfthGradeAD = [
-    {arabic: "اللغة العربية", english: "Arabic"},
-    {arabic: "الرياضيات", english: "Maths"},
-    {arabic: "اللغة الإنجليزية", english: "English"},
     {arabic: "المواطنة", english: "Citizenship"},
-    {arabic: "التربية الدينية", english: "Religion"},
     {arabic: "حقوق الانسان", english: "Human Rights"},
-    {arabic: "الاحياء", english: "Biology"},
     {arabic: "الفيزياء", english: "Physics"},
     {arabic: "علم النفس", english: "Psychology"},
     {arabic: "الاقتصاد", english: "Economics"},
-    {arabic: "اللغة الفرنسية", english: "French"},
-    {arabic: "اللغة الألمانية", english: "German"},
-    {arabic: "الحاسب الآلي", english: "Computer"},
+
+
+]
+
+export const EleventhGradeAD = [
+]
+
+
+export const TwelfthGradeAD = [
 ]
 
 

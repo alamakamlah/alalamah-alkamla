@@ -29,6 +29,11 @@ const Library = ({isEnglish, setIsEnglish}) => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
     }, [system])
     useEffect(() => {
         if (system.english === "Egyptian System") {
@@ -82,10 +87,66 @@ const Library = ({isEnglish, setIsEnglish}) => {
             if (grade.english==="Twelfth Grade Arts and Humanities") setSubjects(years.TwelfthLevelArts)
             if (grade.english==="Twelfth Grade Science") setSubjects(years.TwelfthLevelSci)
             if (grade.english==="Twelfth Grade Technology") setSubjects(years.TwelfthLevelTech)
-        }
+        } else if (system.english === "American System") {
+            if(isFirstTerm.english==="First Term") {
+                if (grade.english==="First Grade") setSubjects(years.FirstGradeFirstTerm)
+                if (grade.english==="Second Grade") setSubjects(years.SecondGradeFirstTerm)
+                if (grade.english==="Third Grade") setSubjects(years.ThirdGradeFirstTerm)
+                if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeFirstTerm)
+                if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeFirstTerm)
+                if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeFirstTerm)
+                if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeFirstTerm)
+                if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeFirstTerm)
+                if (grade.english==="Ninth Grade") setSubjects(years.NinthGradeFirstTerm)
+                if (grade.english==="SAT") setSubjects(years.TenthGradeAD)
+                if (grade.english==="EST") setSubjects(years.TenthGradeAD)
+                if (grade.english==="ACT") setSubjects(years.TenthGradeAD)
+            } else if(isFirstTerm.english ==="Second Term") {
+                if (grade.english==="First Grade") setSubjects(years.FirstGradeSecondTerm)
+                if (grade.english==="Second Grade") setSubjects(years.SecondGradeSecondTerm)
+                if (grade.english==="Third Grade") setSubjects(years.ThirdGradeSecondTerm)
+                if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeSecondTerm)
+                if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeSecondTerm)
+                if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeSecondTerm)
+                if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeSecondTerm)
+                if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeSecondTerm)
+                if (grade?.english==="Ninth Grade") setSubjects(years.NinthGradeSecondTerm)
+                if (grade.english==="SAT") setSubjects(years.TenthGradeAD)
+                if (grade.english==="EST") setSubjects(years.TenthGradeAD)
+                if (grade.english==="ACT") setSubjects(years.TenthGradeAD)
+            }
         
-      }, [isFirstTerm, grade, system])
-
+      } else if (system.english === "British System") {
+        if(isFirstTerm.english==="First Term") {
+            if (grade.english==="First Grade") setSubjects(years.FirstGradeFirstTerm)
+            if (grade.english==="Second Grade") setSubjects(years.SecondGradeFirstTerm)
+            if (grade.english==="Third Grade") setSubjects(years.ThirdGradeFirstTerm)
+            if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeFirstTerm)
+            if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeFirstTerm)
+            if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeFirstTerm)
+            if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeFirstTerm)
+            if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeFirstTerm)
+            if (grade.english==="Ninth Grade") setSubjects(years.NinthGradeFirstTerm)
+            if (grade.english==="IGCSE") setSubjects(years.AS)
+            if (grade.english==="AS") setSubjects(years.AS)
+            if (grade.english==="OL") setSubjects(years.OL)
+        } else if(isFirstTerm.english ==="Second Term") {
+            if (grade.english==="First Grade") setSubjects(years.FirstGradeSecondTerm)
+            if (grade.english==="Second Grade") setSubjects(years.SecondGradeSecondTerm)
+            if (grade.english==="Third Grade") setSubjects(years.ThirdGradeSecondTerm)
+            if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeSecondTerm)
+            if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeSecondTerm)
+            if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeSecondTerm)
+            if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeSecondTerm)
+            if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeSecondTerm)
+            if (grade?.english==="Ninth Grade") setSubjects(years.NinthGradeSecondTerm)
+            if (grade.english==="IGCSE") setSubjects(years.AS)
+            if (grade.english==="AS") setSubjects(years.AS)
+            if (grade.english==="OL") setSubjects(years.OL)
+        }
+    
+  }
+    }, [isFirstTerm, grade, system])
     const navigate = useNavigate()
     useEffect(() => {
         dispatch(getLibrary())
@@ -149,12 +210,12 @@ const Library = ({isEnglish, setIsEnglish}) => {
                         </form>
                     </div>
                 </div>
-                {user?.email === "alalamahalkamla@gmail.com" && 
+                {user?.type?.english === "Admin" && 
                     <h4 className="store-link" onClick={() => {navigate('./new')}}>Add new item</h4>                    
                 }
-                {user?.email === "for4future@gmail.com" && 
+                {/* {user?.email === "for4future@gmail.com" && 
                     <h4 className="store-link" onClick={() => {navigate('./new')}}>Add new item</h4>                    
-                }
+                } */}
                 <div className="divider" />
                 <div className="products-container">
                     {library.map((item) => (

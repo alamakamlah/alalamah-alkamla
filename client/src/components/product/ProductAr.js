@@ -12,12 +12,12 @@ const ProductAr = ({product}) => {
   const userC = JSON.parse(localStorage.getItem('profile'))?.result
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const [isBought, setIsBought] = useState(product?.users.includes(userC?._id) || userC?.email === "alalamahalkamla@gmail.com" || userC?.email === "for4future@gmail.com" || userC?._id === product?.user?._id)
+  const [isBought, setIsBought] = useState(product?.users.includes(userC?._id) || userC?.type?.english === "Admin" || userC?.email === "for4future@gmail.com" || userC?._id === product?.user?._id)
   const displayVideo = isBought && product.type === "video"
   const displayDownload = isBought && product.type === "file"
   const [isEnough, setIsEnough] = useState(true) 
   const [isDelete, setIsDelete] = useState(false)
-  const isAuthorized = userC?.email === "alalamahalkamla@gmail.com" || userC?.email === "for4future@gmail.com" || product?.user?._id === userC?._id
+  const isAuthorized = userC?.type?.english === "Admin" || userC?.email === "for4future@gmail.com" || product?.user?._id === userC?._id
   useEffect(() => {
     dispatch(getUser(userC?._id));
     dispatch(getUsers())

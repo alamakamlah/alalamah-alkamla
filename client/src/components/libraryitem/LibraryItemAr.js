@@ -12,12 +12,12 @@ const LibraryItemAr = ({product}) => {
   const userC = JSON.parse(localStorage.getItem('profile'))?.result
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const [isBought, setIsBought] = useState(product?.users.includes(userC?._id) || userC?.email === "for4future@gmail.com" || userC?.email === "alalamahalkamla@gmail.com")
+  const [isBought, setIsBought] = useState(product?.users.includes(userC?._id) || userC?.email === "for4future@gmail.com" || userC?.type?.english === "Admin")
   const displayVideo = isBought && product.type === "video"
   const displayDownload = isBought && product.type === "file"
   const [isEnough, setIsEnough] = useState(true) 
   const [isDelete, setIsDelete] = useState(false)
-  const isAuthorized = userC?.email === "alalamahalkamla@gmail.com" || userC?.email === "for4future@gmail.com"
+  const isAuthorized = userC?.type?.english === "Admin" || userC?.email === "for4future@gmail.com"
   useEffect(() => {
     dispatch(getUser(userC?._id));
     dispatch(getUsers())

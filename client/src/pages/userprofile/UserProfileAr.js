@@ -16,16 +16,31 @@ const UserProfileAr = ({isEnglish, setIsEnglish}) => {
     const [isFirstTerm, setIsFirstTerm] = useState({})
     const [toggleGrade, setToggleGrade ] = useState(false)
     const [toggleTerm, setToggleTerm ] = useState(false)
+    const [toggleSystem, setToggleSystem] = useState(false)
+    const [system, setSystem] = useState({arabic: "النظام", english: "System"})
+    const [grades, setGrades] = useState([])
     const id = JSON.parse(localStorage.getItem('profile'))?.result?._id
     const navigate = useNavigate()
     useEffect(() => {
         dispatch(getUser(id));
       }, []);
+      useEffect(() => {
+        if (system?.english === "Qatari System") {
+            setGrades(years.yearsQatar)
+        } else if (system?.english === "Egyptian System") {
+            setGrades(years.yearsEgypt)
+        }
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
+    }, [system])   
       const {user, users} = useSelector((state) => state.users)
       const [userData, setUserData] = useState(user)
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
         e.preventDefault();
-        dispatch(updateUser(id, { ...userData }));
+        await dispatch(updateUser(id, { ...userData }));
         window.location.reload()
     }
 
@@ -34,15 +49,6 @@ const UserProfileAr = ({isEnglish, setIsEnglish}) => {
         dispatch({type: 'LOGOUT'})
         navigate('/')
       }
-      const handleGrade = (e) => {
-        setGrade(years.yearsEgypt[Number(e.target.value)])
-        setUserData({...userData, grade: grade})
-    }
-
-    const handleTerm = (e) => {
-        setIsFirstTerm(years.terms[Number(e.target.value)])
-        setUserData({...userData, term: isFirstTerm})
-    }
 
     if (!user) return null;
 
@@ -88,6 +94,20 @@ const UserProfileAr = ({isEnglish, setIsEnglish}) => {
                     : <h3>{user?.type?.arabic}</h3>}
                     </div>
                     <div className="user-details-field" style={{flexDirection: "row-reverse",  fontFamily: "var(--font-family-arabic)"}}>
+                        <h3>النظام </h3>
+                        {isEdit ? 
+                        <div className="admin-user-mult-container">
+                            <div className="new-lesson-grade" onClick={() => setToggleSystem(!toggleSystem)}>
+                                {system?.arabic}
+                            </div>
+                            {toggleSystem && 
+                                years.Systems.map((year, i) => <p className="new-lesson-option" key={i} onClick={() => { setUserData({...userData, system: year}); setSystem(year); setToggleSystem(false)}} >{year.arabic}</p>)
+                            }
+                        </div>
+                         : <h3>{user?.system?.arabic}</h3>}
+                    </div>
+
+                    <div className="user-details-field" style={{flexDirection: "row-reverse",  fontFamily: "var(--font-family-arabic)"}}>
                         <h3>الصف </h3>
                         {isEdit ? 
                         <div className="admin-user-mult-container">
@@ -95,7 +115,7 @@ const UserProfileAr = ({isEnglish, setIsEnglish}) => {
                              {userData?.grade?.arabic}
                          </div>
                          {toggleGrade && 
-                              years.yearsEgypt.map((year, i) => <p style={{textAlign: "end"}} className="auth-option" key={i} onClick={() => { setUserData({...userData, grade: year}); setGrade(year); setToggleGrade(false)}} >{year.arabic}</p>)
+                              grades.map((year, i) => <p style={{textAlign: "end"}} className="auth-option" key={i} onClick={() => { setUserData({...userData, grade: year}); setGrade(year); setToggleGrade(false)}} >{year.arabic}</p>)
                            }
                         </div>
                         

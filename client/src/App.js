@@ -76,7 +76,7 @@ function App() {
   const [isEnglish, setIsEnglish] = useState(true)
   const dispatch = useDispatch()
   const user = JSON.parse(localStorage.getItem('profile'))
-  const isAdmin = user?.result?.email === "for4future@gmail.com" || user?.result?.email === "alalamahalkamla@gmail.com"
+  const isAdmin = user?.result?.email === "for4future@gmail.com" || user?.type?.english === "Admin"
 
   return (
     <div className="app-container">

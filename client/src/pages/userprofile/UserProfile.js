@@ -30,12 +30,18 @@ const UserProfile = ({isEnglish, setIsEnglish}) => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
-    }, [system])
-      const {user, users} = useSelector((state) => state.users)
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
+    }, [system])      
+    const {user, users} = useSelector((state) => state.users)
       const [userData, setUserData] = useState(user)
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
         e.preventDefault();
-        dispatch(updateUser(id, { ...userData }));
+        console.log(userData)
+        await dispatch(updateUser(id, { ...userData }));
         window.location.reload()
     }
 

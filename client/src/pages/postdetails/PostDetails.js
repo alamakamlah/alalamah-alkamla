@@ -24,7 +24,7 @@ const PostDetails = ({isEnglish, setIsEnglish} ) => {
     const user = JSON.parse(localStorage.getItem('profile'));
     const userId = user?.result.googleId || user?.result?._id;
     const [comment, setComment] = useState('')
-    const isAuthorized = user?.result.email === "alalamahalkamla@gmail.com" || user?.result?.email === "for4future@gmail.com" || post?.user?._id === userId
+    const isAuthorized = user?.result?.type?.english === "Admin" || user?.result?.email === "for4future@gmail.com" || post?.user?._id === userId
     const navigate = useNavigate()
     const handleDelete = () => {
       dispatch(deletePost(post._id))

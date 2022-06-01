@@ -41,6 +41,11 @@ const LibraryNew = ({isEnglish, setIsEnglish}) => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
     }, [system])
     useEffect(() => {
         if (system.english === "Egyptian System") {
@@ -94,9 +99,66 @@ const LibraryNew = ({isEnglish, setIsEnglish}) => {
             if (grade.english==="Twelfth Grade Arts and Humanities") setSubjects(years.TwelfthLevelArts)
             if (grade.english==="Twelfth Grade Science") setSubjects(years.TwelfthLevelSci)
             if (grade.english==="Twelfth Grade Technology") setSubjects(years.TwelfthLevelTech)
-        }
+        } else if (system.english === "American System") {
+            if(isFirstTerm.english==="First Term") {
+                if (grade.english==="First Grade") setSubjects(years.FirstGradeFirstTerm)
+                if (grade.english==="Second Grade") setSubjects(years.SecondGradeFirstTerm)
+                if (grade.english==="Third Grade") setSubjects(years.ThirdGradeFirstTerm)
+                if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeFirstTerm)
+                if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeFirstTerm)
+                if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeFirstTerm)
+                if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeFirstTerm)
+                if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeFirstTerm)
+                if (grade.english==="Ninth Grade") setSubjects(years.NinthGradeFirstTerm)
+                if (grade.english==="SAT") setSubjects(years.TenthGradeAD)
+                if (grade.english==="EST") setSubjects(years.TenthGradeAD)
+                if (grade.english==="ACT") setSubjects(years.TenthGradeAD)
+            } else if(isFirstTerm.english ==="Second Term") {
+                if (grade.english==="First Grade") setSubjects(years.FirstGradeSecondTerm)
+                if (grade.english==="Second Grade") setSubjects(years.SecondGradeSecondTerm)
+                if (grade.english==="Third Grade") setSubjects(years.ThirdGradeSecondTerm)
+                if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeSecondTerm)
+                if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeSecondTerm)
+                if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeSecondTerm)
+                if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeSecondTerm)
+                if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeSecondTerm)
+                if (grade?.english==="Ninth Grade") setSubjects(years.NinthGradeSecondTerm)
+                if (grade.english==="SAT") setSubjects(years.TenthGradeAD)
+                if (grade.english==="EST") setSubjects(years.TenthGradeAD)
+                if (grade.english==="ACT") setSubjects(years.TenthGradeAD)
+            }
         
-      }, [isFirstTerm, grade, system])
+      } else if (system.english === "British System") {
+        if(isFirstTerm.english==="First Term") {
+            if (grade.english==="First Grade") setSubjects(years.FirstGradeFirstTerm)
+            if (grade.english==="Second Grade") setSubjects(years.SecondGradeFirstTerm)
+            if (grade.english==="Third Grade") setSubjects(years.ThirdGradeFirstTerm)
+            if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeFirstTerm)
+            if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeFirstTerm)
+            if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeFirstTerm)
+            if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeFirstTerm)
+            if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeFirstTerm)
+            if (grade.english==="Ninth Grade") setSubjects(years.NinthGradeFirstTerm)
+            if (grade.english==="IGCSE") setSubjects(years.AS)
+            if (grade.english==="AS") setSubjects(years.AS)
+            if (grade.english==="OL") setSubjects(years.OL)
+        } else if(isFirstTerm.english ==="Second Term") {
+            if (grade.english==="First Grade") setSubjects(years.FirstGradeSecondTerm)
+            if (grade.english==="Second Grade") setSubjects(years.SecondGradeSecondTerm)
+            if (grade.english==="Third Grade") setSubjects(years.ThirdGradeSecondTerm)
+            if (grade.english==="Fourth Grade") setSubjects(years.FourthGradeSecondTerm)
+            if (grade.english==="Fifth Grade") setSubjects(years.FifthGradeSecondTerm)
+            if (grade.english==="Sixth Grade") setSubjects(years.SixthGradeSecondTerm)
+            if (grade.english==="Seventh Grade") setSubjects(years.SeventhGradeSecondTerm)
+            if (grade.english==="Eighth Grade") setSubjects(years.EighthGradeSecondTerm)
+            if (grade?.english==="Ninth Grade") setSubjects(years.NinthGradeSecondTerm)
+            if (grade.english==="IGCSE") setSubjects(years.AS)
+            if (grade.english==="AS") setSubjects(years.AS)
+            if (grade.english==="OL") setSubjects(years.OL)
+        }
+    
+  }
+    }, [isFirstTerm, grade, system])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -114,7 +176,7 @@ const LibraryNew = ({isEnglish, setIsEnglish}) => {
     }
 
 
-    if (profile.email !== "alalamahalkamla@gmail.com" || profile?.email !== "for4future@gmail.com") return null
+    if (profile?.type?.english !== "Admin" || profile?.email !== "for4future@gmail.com") return null
 
 
 

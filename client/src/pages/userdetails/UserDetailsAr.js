@@ -13,10 +13,12 @@ const UserDetailsAr = ({isEnglish, setIsEnglish}) => {
     const [isEdit, setIsEdit] = useState(false)
     const [isDelete, setIsDelete] = useState(false)
     const [grade, setGrade] = useState({})
+    const [type, setType] = useState({})
     const [system, setSystem] = useState({})
     const [grades, setGrades] = useState([])
     const [isFirstTerm, setIsFirstTerm] = useState({})
     const [toggleGrade, setToggleGrade ] = useState(false)
+    const [toggleType, setToggleType ] = useState(false)
     const [toggleSystem, setToggleSystem] = useState(false)
     const [toggleTerm, setToggleTerm ] = useState(false)
     const { id } = useParams();
@@ -30,23 +32,33 @@ const UserDetailsAr = ({isEnglish, setIsEnglish}) => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
-    }, [system])
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
+    }, [system])      
       const {user, users} = useSelector((state) => state.users)
 
-      const handleClick = (e) => {
-          e.preventDefault();
-          if (system) {
-              userData = {...userData, system: system}
-          }
-          if (grade) {
+      const handleClick = async (e) => {
+        e.preventDefault();
+        console.log(type)
+        console.log(userData)
+        if (system) {
+            userData = {...userData, system: system}
+        }
+        if (grade) {
             userData = {...userData, grade: grade}
         }
         if (isFirstTerm) {
             userData = {...userData, term: isFirstTerm}
         }
-          dispatch(updateUser(id, { ...userData }));
-          window.location.reload()
+        if (type) {
+            userData = {...userData, type: type}
         }
+        await dispatch(updateUser(id, { ...userData }));
+        window.location.reload()
+    }
         
     const handleDelete = () => {
         dispatch(deleteUser(id))
@@ -86,19 +98,18 @@ const UserDetailsAr = ({isEnglish, setIsEnglish}) => {
                         <h3>البريد الالكتروني</h3>
                         <h3>{user.email}</h3>
                     </div>
-                    <div style={{flexDirection: "row-reverse", fontFamily: "var(--font-family-arabic)"}} className="user-details-field">
+                    <div className="user-details-field user-details-field-type" style={{flexDirection: "row-reverse", fontFamily: "var(--font-family-arabic)"}}>
                         <h3>النوع </h3>
                         {isEdit ?     
-                        <div className="admin-multiple-input-container" style={{flexDirection: "row-reverse", fontFamily: "var(--font-family-arabic)"}}>
-                            <input type="radio" name="user_type" id="user-type-student" />
-                            <label htmlFor="user-type-student" onClick={() => {setUserData({...userData, type: years.types[0]})}}>{years.types[0].arabic}</label>
-                            <input type="radio" name="user_type" id="user-type-teacher" />
-                            <label htmlFor="user-type-teacher" onClick={() => {setUserData({...userData, type: years.types[1]})}}>{years.types[1].arabic}</label>
-                            <input type="radio" name="user_type" id="user-type-parent" />
-                            <label htmlFor="user-type-parent" onClick={() => {setUserData({...userData, type: years.types[2]})}}>{years.types[2].arabic}</label>
-                            <input type="radio" name="user_type" id="user-type-institution" />
-                            <label htmlFor="user-type-institution" onClick={() => {setUserData({...userData, type: years.types[3]})}}>{years.types[3].arabic}</label>
+                        <div className="admin-user-mult-container">
+                            <div className="new-lesson-grade" onClick={() => setToggleType(!toggleType)}>
+                                {type?.arabic}
+                            </div>
+                            {toggleType && 
+                                years.typesAdmin.map((year, i) => <p className="new-lesson-option" key={i} onClick={() => { setUserData({...userData, type: year}); setType(year); setToggleType(false)}} >{year.arabic}</p>)
+                            }
                         </div>
+
                     : <h3>{user?.type?.arabic}</h3>}
                     </div>
                     <div className="user-details-field" style={{flexDirection: "row-reverse", fontFamily: "var(--font-family-arabic)"}}>

@@ -26,9 +26,9 @@ const TestDetailsAr = ({isEnglish, setIsEnglish}) => {
 
   const answer = []
 
-  const [isBought, setIsBought] = useState( userC?.result.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com" || test?.users.includes(userC?.result?._id) || userC?.result?._id === test?.user?._id)
+  const [isBought, setIsBought] = useState( userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com" || test?.users.includes(userC?.result?._id) || userC?.result?._id === test?.user?._id)
 
-  const isAuthorized = userC?.result.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com" || test?.user?._id === userC?.result?._id
+  const isAuthorized = userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com" || test?.user?._id === userC?.result?._id
 
   const handleDelete = () => {
     dispatch(deleteTest(test._id))

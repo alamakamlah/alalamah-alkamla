@@ -11,11 +11,11 @@ import './navbar.css'
 const LoginMenu = ({user, navigate, logout}) => (
         user ? 
             (<div className="aa-navbar__container-login slit-in-vertical" style={{left: "0%"}}>
-                <div className="aa-navbar__container-login_item" onClick={() => user.result.email === 'alalamahalkamla@gmail.com' ? navigate('/admin') : user.result.email === 'for4future@gmail.com' ? navigate('/admin') : navigate('/dashboard')}>لوحة التحكم</div>
-                {user?.result?.email !== "alalamahalkamla@gmail.com" && user?.result?.email !== "for4future@gmail.com" && 
+                <div className="aa-navbar__container-login_item" onClick={() => user?.result?.type?.english === "Admin" ? navigate('/admin') : user.result.email === 'for4future@gmail.com' ? navigate('/admin') : navigate('/dashboard')}>لوحة التحكم</div>
+                {user?.result?.type?.english !== "Admin" && user?.result?.email !== "for4future@gmail.com" && 
                     <div className="aa-navbar__container-login_item" onClick={() => navigate('/profile/points')}>نقاطي</div>
                 }
-                {user?.result?.email !== "alalamahalkamla@gmail.com" && user?.result?.email !== "for4future@gmail.com" &&  user?.result?.type?.english !== "Teacher" && user?.result?.type?.english !== "Institution" &&
+                {user?.result?.type?.english !== "Admin" && user?.result?.email !== "for4future@gmail.com" &&  user?.result?.type?.english !== "Teacher" && user?.result?.type?.english !== "Institution" &&
                     <div className="aa-navbar__container-login_item" onClick={() => navigate('/subjects')}>المناهج</div>
                 }
                 <button className="button-primary" onClick={logout}>تسجيل الخروج</button>

@@ -14,11 +14,11 @@ import * as years from '../../constants/coursesandgrades.js'
 const LoginMenu = ({user, setUser, navigate, logout}) => (
         user ? 
             (<div className="aa-navbar__container-login slit-in-vertical">
-                <div className="aa-navbar__container-login_item" onClick={() => user.result.email === 'alalamahalkamla@gmail.com' ? navigate('/admin') : user.result.email === 'for4future@gmail.com' ? navigate('/admin') : navigate('/dashboard')}>Dashboard</div>
-                {user?.result?.email !== "alalamahalkamla@gmail.com" && user?.result?.email !== "for4future@gmail.com" &&
+                <div className="aa-navbar__container-login_item" onClick={() => user?.result?.type?.english === "Admin" ? navigate('/admin') : user.result.email === 'for4future@gmail.com' ? navigate('/admin') : navigate('/dashboard')}>Dashboard</div>
+                {user?.result?.type?.english !== "Admin" && user?.result?.email !== "for4future@gmail.com" &&
                 <div className="aa-navbar__container-login_item" onClick={() => navigate('/profile/points')}>My Points</div>
                 }
-                {user?.result?.email !== "alalamahalkamla@gmail.com" && user?.result?.email !== "for4future@gmail.com" && user?.result?.type?.english !== "Teacher" && user?.result?.type?.english !== "Institution" &&
+                {user?.result?.type?.english !== "Admin" && user?.result?.email !== "for4future@gmail.com" && user?.result?.type?.english !== "Teacher" && user?.result?.type?.english !== "Institution" &&
                 <div className="aa-navbar__container-login_item" onClick={() => navigate('/subjects')}>Subjects</div>
                 }
                 <button className="button-primary" onClick={logout} >Sign Out</button>

@@ -31,9 +31,9 @@ const ProductDetailsAr = ({isEnglish, setIsEnglish}) => {
   const owner = users?.find(({_id}) => _id === product?.user?._id)
 
 
-  const isBought = product?.users.includes(userC?.result?._id) || userC?.result?._id === product?.user?._id || userC?.result?.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com"
+  const isBought = product?.users.includes(userC?.result?._id) || userC?.result?._id === product?.user?._id || userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com"
 
-  const isAuthorized = userC?.result.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com" || product?.user?._id === userC?.result?._id
+  const isAuthorized = userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com" || product?.user?._id === userC?.result?._id
   const displayVideo = isBought && product?.type === "video"
   const displayDownload = isBought && product?.type === "file"
   const [comment, setComment] = useState('')

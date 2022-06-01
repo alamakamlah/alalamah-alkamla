@@ -40,8 +40,13 @@ const Auth = () => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
     }, [system])
-    const handleSubmit = (e) => {
+      const handleSubmit = (e) => {
         e.preventDefault()
         setFormData({...formData, grade: grade, term: isFirstTerm, system: system})
         if(isSignUp) {

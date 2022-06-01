@@ -42,9 +42,9 @@ const CourseDetails = ({isEnglish, setIsEnglish}) => {
   ))
   const avgRating = Number(total) / (Number(course?.ratings.length))
 
-  const isBought = userC?.result.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com" || course?.users.includes(userC?.result?._id) || userC?.result?._id === course?.user?._id
+  const isBought = userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com" || course?.users.includes(userC?.result?._id) || userC?.result?._id === course?.user?._id
 
-  const isAuthorized = userC?.result.email === "alalamahalkamla@gmail.com" || userC?.result?.email === "for4future@gmail.com" || course?.user?._id === userC?.result?._id
+  const isAuthorized = userC?.result?.type?.english === "Admin" || userC?.result?.email === "for4future@gmail.com" || course?.user?._id === userC?.result?._id
 
   const handleDelete = () => {
     dispatch(deleteCourse(course._id))
@@ -102,7 +102,7 @@ const handleRating = () => {
           {isAuthorized && 
             <div className="post-details-creator-actions">
               <div className="delete-icon" onClick={() => setIsDelete(true)}><FaTrash /></div>
-              <div className="edit-icon" onClick={() => {navigate('./edit')}}><FaRegEdit /></div>
+              {/* <div className="edit-icon" onClick={() => {navigate('./edit')}}><FaRegEdit /></div> */}
             </div>
           }
         

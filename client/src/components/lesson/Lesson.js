@@ -10,7 +10,7 @@ const Lesson = ({lesson}) => {
     const userC = JSON.parse(localStorage.getItem('profile'))?.result
     const dispatch = useDispatch()
     
-    const [isBought, setIsBought] = useState(lesson?.users.includes(userC?._id) || userC?.email === "for4future@gmail.com" || userC?.email === "alalamahalkamla@gmail.com" || userC?._id === lesson?.user?._id)
+    const [isBought, setIsBought] = useState(lesson?.users.includes(userC?._id) || userC?.email === "for4future@gmail.com" || userC?.type?.english === "Admin" || userC?._id === lesson?.user?._id)
     const [isEnough, setIsEnough] = useState(true) 
     const [isDelete, setIsDelete] = useState(false)
     useEffect(() => {
@@ -19,7 +19,7 @@ const Lesson = ({lesson}) => {
       }, []);
       const {user, users} = useSelector((state) => state.users)
       const owner = users?.find(({_id}) => _id === lesson?.user?._id)
-      const isAuthorized = userC?.email === "alalamahalkamla@gmail.com" || lesson?.user?._id === userC?._id || userC?.email === "for4future@gmail.com"
+      const isAuthorized = userC?.type?.english === "Admin" || lesson?.user?._id === userC?._id || userC?.email === "for4future@gmail.com"
 
     const handleClick = (e) => {
         e.preventDefault();

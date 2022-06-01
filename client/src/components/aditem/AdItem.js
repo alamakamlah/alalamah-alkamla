@@ -12,7 +12,7 @@ const AdItem = ({ad}) => {
     const [isDelete, setIsDelete] = useState(false)
     let date = new Date(ad.createdAt)
     let adDate = new Date(ad.createdAt)
-    const isAuthorized = ad?.user?._id === user?._id || user?.email === "alalamahalkamla@gmail.com" || user?.email === "for4future@gmail.com"
+    const isAuthorized = ad?.user?._id === user?._id || user?.type?.english === "Admin" || user?.email === "for4future@gmail.com"
     
 
     useEffect(() => {

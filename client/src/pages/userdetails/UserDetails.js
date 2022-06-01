@@ -6,6 +6,7 @@ import { getUser, deleteUser, updateUser } from '../../actions/users'
 import {FaRegEdit} from 'react-icons/fa'
 import * as years from '../../constants/coursesandgrades.js'
 import './userdetails.css'
+import { type } from '@testing-library/user-event/dist/type'
 
  
 const UserDetails = ({isEnglish, setIsEnglish}) => {
@@ -13,10 +14,12 @@ const UserDetails = ({isEnglish, setIsEnglish}) => {
     const [isEdit, setIsEdit] = useState(false)
     const [isDelete, setIsDelete] = useState(false)
     const [grade, setGrade] = useState({})
+    const [type, setType] = useState({})
     const [system, setSystem] = useState({})
     const [grades, setGrades] = useState([])
     const [isFirstTerm, setIsFirstTerm] = useState({})
     const [toggleGrade, setToggleGrade ] = useState(false)
+    const [toggleType, setToggleType ] = useState(false)
     const [toggleSystem, setToggleSystem] = useState(false)
     const [toggleTerm, setToggleTerm ] = useState(false)
     const { id } = useParams();
@@ -30,23 +33,33 @@ const UserDetails = ({isEnglish, setIsEnglish}) => {
         } else if (system?.english === "Egyptian System") {
             setGrades(years.yearsEgypt)
         }
-    }, [system])
+        else if (system?.english === "American System") {
+            setGrades(years.yearsAmerican)
+        } else if (system?.english === "British System") {
+            setGrades(years.yearsBritish)
+        }
+    }, [system])      
       const {user, users} = useSelector((state) => state.users)
 
-      const handleClick = (e) => {
-          e.preventDefault();
-          if (system) {
-              userData = {...userData, system: system}
-          }
-          if (grade) {
+      const handleClick = async (e) => {
+        e.preventDefault();
+        console.log(type)
+        console.log(userData)
+        if (system) {
+            userData = {...userData, system: system}
+        }
+        if (grade) {
             userData = {...userData, grade: grade}
         }
         if (isFirstTerm) {
             userData = {...userData, term: isFirstTerm}
         }
-          dispatch(updateUser(id, { ...userData }));
-          window.location.reload()
+        if (type) {
+            userData = {...userData, type: type}
         }
+        await dispatch(updateUser(id, { ...userData }));
+        window.location.reload()
+    }
         
     const handleDelete = () => {
         dispatch(deleteUser(id))
@@ -89,16 +102,15 @@ const UserDetails = ({isEnglish, setIsEnglish}) => {
                     <div className="user-details-field user-details-field-type">
                         <h3>Type: </h3>
                         {isEdit ?     
-                        <div className="admin-multiple-input-container">
-                            <input type="radio" name="user_type" id="user-type-student" />
-                            <label htmlFor="user-type-student" onClick={() => {setUserData({...userData, type: years.types[0]})}}>{years.types[0].english}</label>
-                            <input type="radio" name="user_type" id="user-type-teacher" />
-                            <label htmlFor="user-type-teacher" onClick={() => {setUserData({...userData, type: years.types[1]})}}>{years.types[1].english}</label>
-                            <input type="radio" name="user_type" id="user-type-parent" />
-                            <label htmlFor="user-type-parent" onClick={() => {setUserData({...userData, type: years.types[2]})}}>{years.types[2].english}</label>
-                            <input type="radio" name="user_type" id="user-type-institution" />
-                            <label htmlFor="user-type-institution" onClick={() => {setUserData({...userData, type: years.types[3]})}}>{years.types[3].english}</label>
+                        <div className="admin-user-mult-container">
+                            <div className="new-lesson-grade" onClick={() => setToggleType(!toggleType)}>
+                                {type?.english}
+                            </div>
+                            {toggleType && 
+                                years.typesAdmin.map((year, i) => <p className="new-lesson-option" key={i} onClick={() => { setUserData({...userData, type: year}); setType(year); setToggleType(false)}} >{year.english}</p>)
+                            }
                         </div>
+
                     : <h3>{user?.type?.english}</h3>}
                     </div>
                     <div className="user-details-field">

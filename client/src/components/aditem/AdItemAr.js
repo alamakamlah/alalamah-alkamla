@@ -15,7 +15,7 @@ const AdItemAr = ({ad}) => {
     const [isDelete, setIsDelete] = useState(false)
     let date = new Date()
     date.setDate(date.getDate() + 3)
-    const isAuthorized = ad?.user?._id === user?._id || user?.email === "alalamahalkamla@gmail.com" || user?.email === "for4future@gmail.com"
+    const isAuthorized = ad?.user?._id === user?._id || user?.type?.english === "Admin" || user?.email === "for4future@gmail.com"
     moment.locale('ar_SA')
     
 

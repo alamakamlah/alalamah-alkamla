@@ -33,7 +33,7 @@ const NewAdAr = ({isEnglish, setIsEnglish}) => {
 
     const handleSubmit = (e) => {
       e.preventDefault()
-      if (userC?.email === "alalamahalkamla@gmail.com" || userC?.email === "for4future@gmail.com") {
+      if (userC?.type?.english === "Admin" || userC?.email === "for4future@gmail.com") {
         dispatch(createAd({...productData, user: userC}))
         navigate('/ad')
       }
@@ -47,7 +47,7 @@ const NewAdAr = ({isEnglish, setIsEnglish}) => {
 
 
 
-    if (!user || userC?.email !== "alalamahalkamla@gmail.com" || userC?.email !== "for4future@gmail.com") return null;
+    if (!user || userC?.type?.english !== "Admin" || userC?.email !== "for4future@gmail.com") return null;
 
 
   return (

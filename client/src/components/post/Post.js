@@ -15,7 +15,7 @@ const Post = ({post}) => {
   const userId = user?.result.googleId || user?.result?._id;
   const hasLikedPost = post?.likes?.find((like) => like === userId);
 
-  const isAuthorized = user?.result.email === "alalamahalkamla@gmail.com" || user?.result?.email === "for4future@gmail.com" || post?.user?._id === userId
+  const isAuthorized = user?.result?.type?.english === "Admin" || user?.result?.email === "for4future@gmail.com" || post?.user?._id === userId
 
   const handleLike = async () => {
     dispatch(likePost(post._id));
